@@ -17,7 +17,7 @@ int main()
 	morphologyEx(dist, proc, MORPH_OPEN, element);
 	morphologyEx(proc, proc1, MORPH_CLOSE, element1);
 	int nComp = connectedComponentsWithStats(proc1, labelmat, statsmat, centermat, 8, CV_32S);
-	cout << "硬币个数为:" << nComp - 1 << endl;
+	cout << "圆的个数为:" << nComp - 1 << endl;
 	for (int i = 1; i < nComp; i++)
 	{
 		Rect bndbox;
